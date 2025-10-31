@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $dados = $resultado->fetch_assoc();
         $_SESSION["nome_usuario"] = $dados["nome_usuario"];
         $_SESSION["idUsuário"] = $dados["idUsuário"];
-        $_SESSION["conectado"] == true;
+        $_SESSION["conectado"] = true;
 
         header ("Location: gerenciamento_tarefas.php");
         exit;
