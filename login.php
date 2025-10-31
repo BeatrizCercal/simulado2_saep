@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["idUsuário"] = $dados["Usuário_idUsuário"];
         $_SESSION["conectado"] == true;
 
-        header ("Location: cadastro_tarefas.php");
+        header ("Location: pagina_inicial.php");
         exit;
     }
 }
