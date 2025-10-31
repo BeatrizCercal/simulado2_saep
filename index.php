@@ -8,12 +8,11 @@ if (isset($_SESSION['erro'])) {
 }
 
 if (isset($_SESSION["nome_usuario"]) && isset($_SESSION['conectado'])) {
-    if ($_SESSION["conectado"] == true){
-    header("Location: tela_inicial.php ");
-    exit;
+    if ($_SESSION["conectado"] == true) {
+        header("Location: tela_inicial.php ");
+        exit;
+    }
 }
-}
-
 
 ?>
 
