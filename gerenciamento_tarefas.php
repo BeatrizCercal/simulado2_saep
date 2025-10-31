@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["conectado"]) || $_SESSION["conectado"] != true) {
-    header("Location: index.php");
+    header("Location: gerenciamento_tarefas.php");
     exit;
 }
 ?>
@@ -18,12 +18,7 @@ if (!isset($_SESSION["conectado"]) || $_SESSION["conectado"] != true) {
     <a href=cadastro_tarefas.php>
         <input type=button value="Cadastrar Tarefas">
 </a>
- <a href=gerenciamento_tarefas.php>
-        <input type=button value="Gerenciamento Tarefas">
-</a>
- <a href=gerenciamento_tarefas.php>
-        <input type=button value="Sair" event= "sair.php" onclick return confirm('Deseja realmente sair?')>
-</a>
+
 
 </body>
 </html>
