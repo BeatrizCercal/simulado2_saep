@@ -3,7 +3,7 @@ session_start();
 
 $erro = "";
 if (isset($_SESSION['erro'])) {
-    $erro = ($_SESSION['erro']);
+    $erro = $_SESSION['erro'] ?? '';
     unset($_SESSION['erro']);
 }
 

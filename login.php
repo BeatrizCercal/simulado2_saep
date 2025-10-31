@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST["email_usuario"] ?? "");
 
     $stmt = $conexao->prepare("SELECT pk, nome_usuario, email_usuario FROM tabela WHERE email_usuario = ? AND senha_usuario = ?");
-    $stmt->bind_param("ss", $nome_usuario, $email_usuario);
+    $stmt->bind_param("ss", $nome, $email);
     $stmt->execute();
     $resultado = $stmt->get_result();
 

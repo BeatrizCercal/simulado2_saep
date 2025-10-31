@@ -1,13 +1,11 @@
 <?php
-session_start();
-
 $nome = 'simulado2';
 $servidor = 'localhost';
 $usuario = 'root';
-$senha = '';
+$senha = 'root';
 
-$conexao = new MYSQLI($nome, $servidor, $usuario, $senha);
+$conexao = new mysqli($nome, $servidor, $usuario, $senha);
 if ($conexao->connect_error) {
-    die("Erro ao conectar" . 'connect_error');
+    die("Erro ao conectar" . $conexao->connect_error);
 }
 ?>
