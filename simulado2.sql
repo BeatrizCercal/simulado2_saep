@@ -29,7 +29,7 @@ ENGINE = InnoDB;
 -- Table `simulado2`.`Tarefas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `simulado2`.`Tarefas` (
-  `idTarefas` INT NOT NULL,
+  `idTarefas` INT NOT NULL AUTO_INCREMENT,
   `descricao_tarefa` VARCHAR(255) NOT NULL,
   `nome_setor` VARCHAR(45) NOT NULL,
   `prioridade_tarefa` ENUM('Baixa', 'Média', 'Alta') NOT NULL,

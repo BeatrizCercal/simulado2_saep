@@ -14,9 +14,9 @@ if($descricao === '' || $setor === ''|| $prioridade === ''){
     echo 'Preencha todos os campos obrigatórios.';
     exit;
 }
-    $stmt=$conn->prepare('INSERT INTO Tarefas ("descricao_tarefa, nome_setor, prioridade_tarefa, nome_usuario") VALUES (?,?,?,?)');
+    $stmt=$conexao->prepare('INSERT INTO Tarefas (descricao_tarefa, nome_setor, prioridade_tarefa) VALUES (?,?,?)');
 if ($stmt){
-    $stmt->bind_param('ssss', $descricao, $setor, $prioridade, $_SESSION['nome_usuario']);
+    $stmt->bind_param('sss', $descricao, $setor, $prioridade);
     if ($stmt->execute()){
         echo 'Tarefa cadastrada.';
     }else{
