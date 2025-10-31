@@ -30,12 +30,19 @@ if (isset($_SESSION["nome_usuario"]) && isset($_SESSION['conectado'])) {
 
     <form action="login.php" method="POST">
         <label>Nome:</label>
-        <input type="nome " name="nome" required>
+        <input type="text" name="nome" required>
 
         <label>Email</label>
         <input type="email" name="email" required>
         <input type="submit" value="Entrar">
     </form>
+
+    <?php
+    if(isset($_SESSION['erro'])) {
+        echo $_SESSION['erro'];
+        $_SESSION['erro'] = "";
+    }
+    ?>
 </body>
 
 </html>

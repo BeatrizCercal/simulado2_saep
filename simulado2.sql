@@ -18,7 +18,7 @@ USE `simulado2` ;
 -- Table `simulado2`.`Usuário`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `simulado2`.`Usuário` (
-  `idUsuário` INT NOT NULL,
+  `idUsuário` INT NOT NULL AUTO_INCREMENT,
   `nome_usuario` VARCHAR(87) NOT NULL,
   `email_usuario` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`idUsuário`))
